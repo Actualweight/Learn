@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性盒属性</title>
+		<style type="text/css">
+			.box{
+				/*设置主轴方向，主轴为水平方向，起点在左端*/
+				flex-direction: row ; 
+				min-height: 160px;
+				width: 850px;
+				/*设置为弹性布局*/
+				display: flex; 
+				/*设置是否可换行，不换行*/
+				flex-wrap:nowrap;
+				background-color: red;
+				margin-top:100px;
+			}
+			.A,.B,.C{
+				
+				border: 1px solid gold;
+				width: 100px;
+				height: 80px;
+				
+				
+			}
+			.box div.A{
+				background-color: green;
+				/*定义项目的排列顺序,值为无单位整数,数值越小，排列越靠前*/
+				order: 1;
+				/*定义子元素放大比例，只有在容器主轴方向大小大于子元素总大小时才有效果*/
+				flex-grow: 0;
+				/*定义子元素缩小比例*/
+				flex-shrink:0;
+				flex-basis: 400px;	
+				
+			}
+			.box div.B{
+				background-color: pink;
+				order: 2;
+				
+			}
+			.box div.C{
+				background-color: beige;
+				order: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="A">A</div>
+			<div class="B">B</div>
+			<div class="C">C</div> 
+		</div>
+	</body>
+</html>

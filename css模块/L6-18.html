@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation-fill-mode属性值</title>
+		<style>
+		 @-webkit-keyframes 'wobble' {
+			 0% {
+				margin-left: 100px;
+				background: green; /*绿色*/
+			 }
+			 40% {
+				margin-left: 150px;
+				background: orange;
+			 }
+			 60% {
+				margin-left: 75px;
+				background: blue;
+			 }
+			 100% {
+				margin-left: 100px;
+				background: red;
+			 }
+		  }
+		div{
+			width: 50px;
+			height: 50px;
+			margin-left: 100px;
+			background: blue; /*蓝色*/
+			
+			-webkit-animation-name:'wobble';
+			animation-duration: 10s;
+			-webkit-animation-timing-function: ease-in-out; 
+			animation-delay: 2s;
+			/*循环次数*/
+			-webkit-animation-iteration-count: 10;
+			animation-direction: alternate;
+			animation-fill-mode:none; /*动画开始为蓝色*/
+			/*animation-fill-mode:backwards; /*动画开始为绿色*/
+			
+			animation: 'wobble' 10s ease-in-out 2s infinite alternate;
+	  }
+</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

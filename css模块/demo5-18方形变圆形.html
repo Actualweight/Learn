@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>方形变圆形</title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: #ff7448;
+				margin: 20px auto;
+				/*依次：名称，时长，方向，次数，开始时间，播放方式*/
+				animation: movediv 3s alternate infinite 2s ease-in-out;
+			}
+			div:hover{
+				animation-play-state: paused;
+			}
+			@keyframes movediv{
+				from{/*定义刚开始时的一些处理，通常直接使用原始样式*/}
+				to{
+					width: 300px;
+					height: 300px;
+					/*圆角*/
+					border-radius: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

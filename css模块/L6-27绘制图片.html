@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绘制图片</title>
+	</head>
+	<body>
+		<canvas id="cavsElem">
+			你的浏览器不支持canvas，请升级浏览器
+		</canvas>
+	</body>
+	<script>
+		
+		var canvas = document.getElementById("cavsElem");//获取画布
+		
+		var context = canvas.getContext('2d');//获取context上下文对象
+		canvas.width=600;
+		canvas.height=400;
+		canvas.style.border="1px solid #000";
+		
+		var img = new Image();//创建图片对象
+		
+		img.src="image/index11.png";//设置图片路径
+		//当页面加载完成使用此图片
+		img.onload = function(){
+			context.drawImage(img,0,0);
+			//以Canvas画布上的坐标(0,0)为起始点，绘制图像
+			//图像的宽度和高度分别缩放到400px和400px
+			//context.drawImage(img,0,0,600,400); 缩放
+			/*
+			从图片的0,0 坐标开始截图，截取 300，500 这么大
+			然后将截取的图片，从canvas 100，100开始画， 缩放 300，300 这么大！
+			*/
+		   // context.drawImage(img,0,0,600,400);
+			 context.drawImage(img,0,0,300,500,100,100,300,300);
+		};
+	</script>
+</html>

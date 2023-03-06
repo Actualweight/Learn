@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@keyframes move {
+				  0%{transform: translateY(90px); }
+				  15%{transform: translate(90px,90px);}
+				  30%{transform: translate(180px,90px);}
+				  45%{transform: translate(90px,90px);}
+				  60%{transform: translate(90px,0);}
+				  75%{transform: translate(90px,90px);}
+				  90%{transform: translate(90px,180px);}
+				  100%{transform: translate(90px,90px);}
+			}
+		
+			div {
+			  width: 200px;
+			  height: 200px;
+			  border: 1px solid red;
+			  margin: 20px auto;
+			}
+			span {
+			  display: inline-block; /*行内块元素*/
+			  width: 20px;
+			  height: 20px;
+			  background: orange;
+			  /*垂直方向移动*/
+			  transform: translateY(90px);
+			  /*动画名称*/
+			  animation-name: move;
+			  /*动画持续时长*/
+			  animation-duration: 10s;
+			  /*播放方式：加速*/
+			  animation-timing-function: ease-in;
+			  animation-delay: 0.2s;
+			  /*循环次数：无限循环*/
+			  animation-iteration-count:infinite;
+			  /*播放方向*/
+			  animation-direction:alternate;
+			  /*播放状态：paused正在播放的动画停下来*/
+			  animation-play-state:paused;
+			}
+			div:hover span {
+			  /*暂停的动画重新播放*/
+			  animation-play-state:running;
+			  background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span></span>
+		</div>
+	</body>
+</html>

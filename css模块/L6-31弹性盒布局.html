@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1,user-scalable=no;">
+		<title>弹性盒布局</title>
+		<style type="text/css">
+			* {
+				margin: 0 auto;
+				padding: 0;
+			}
+			body{
+				background: #fff;
+				width: 80%;
+			}
+			.main{
+				min-height: 720px;
+				margin: 0px;
+				padding: 0px;
+				/*设置该div为一个弹性盒容器*/
+				display: flex;
+				/*子元素按横轴方向顺序排列*/
+				/*flex-flow属性是flex-direction属性和flex-wrap属性的简写形式*/
+				flex-flow: column;/*主轴x方向*/
+			}
+			/*中间部分*/
+			.main > article{
+				/*让对象成为块级元素*/
+				display: block;
+				margin: 4px;
+				/*设置圆角*/
+				border-radius: 8px;
+				min-height: 200px;
+				/*flex属性是flex-grow, flex-shrink 和 flex-basis的简写*/
+				flex: 3;
+				/*定义项目的排列顺序 第2个子元素*/
+				order: 2;
+				background-image: url('image/index13.png'); 
+				background-repeat: no-repeat;
+				background-size: 100.1% 100%;
+				border: 2px solid #FFBA41;
+			}
+			.main > nav{
+				margin: 4px;
+				padding: 5px;
+				border-radius:8px;
+				background: #FFBA41;
+				padding-top: 15px;
+				order: 1;
+				
+			}
+			.main > aside{
+				margin: 4px;
+				padding: 1px;
+				border-radius:8px;
+				background: #FFBA41;
+				flex: 0.1;
+				order: 3;
+				
+			}
+			header{
+				/*让对象成为块级元素*/
+				display: block;
+				margin: 4px;
+				padding: 5px;
+				min-height: 100px;
+				border: 2px solid #FFBA41;
+				border-radius: 8px;
+			
+				background: #FFF;
+				background-image: url('image/logo.png');
+				background-repeat: repeat-x;
+				background-size: 100% 100%;
+			}
+			
+			footer{
+				/*让对象成为块级元素*/
+				display: block;
+				margin: 4px;
+				padding: 5px;
+				min-height: 100px;
+				border: 2px solid #FFBA41;
+				border-radius: 8px;
+				background: #FFF;
+				background-color: beige;
+				/*水平居中*/
+				justify-content: center;
+				/*垂直居中*/
+				align-items:center;
+				/*注：Webkit内核的浏览器，必须加上-webkit前缀。 即应写为： -webkit-flex*/
+				display:-webkit-flex;
+				font-size: 18px;
+			}
+			.menuitem{
+				border: 1px solid #e9e9e9;
+				cursor: pointer;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				float: left;
+			}
+			 
+			.img {
+				float:left;
+				width:110px;
+				height:150px;
+				margin-left:5px;
+				padding-top: 10px;
+				 
+			}
+			@media all and(max-width: 800px) {
+				/*当屏幕小于640px时*/
+				.main{
+					/*弹性盒中的子元素纵轴方向排列*/
+					/*flex-direction属性和flex-wrap属性的简写形式*/
+					flex-flow: column;
+					
+					
+				}
+				.main > article .main > nav .main > aside {
+					/*将子元素都设置成同一个值，指按自然顺序排序*/
+					order: 0;				
+				}
+				.main > nav,header,footer{
+					min-height: 50px;
+					max-height: 50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<div class="main">
+			<article></article>
+			<nav>	
+				<h2 style="color: red;">长沙职业技术学院</h2><br>
+				<div class="menuitem">学院概况</div>
+				<div class="menuitem">机构设置</div>
+				<div class="menuitem">教学管理</div>
+				<div class="menuitem">科学研究</div>
+				<div class="menuitem">招生就业</div>
+				<div class="menuitem">合作交流</div>
+				<div class="menuitem">校园服务</div>
+				<div class="menuitem">专题网站</div>
+				<div class="menuitem">项目合作</div>
+				<div class="menuitem">学团工作</div>
+				<div class="menuitem">校园风采</div>
+				<div class="menuitem">共建职业</div>
+			</nav>
+			<aside>
+				<img class="img" src="image/img1.png"/>
+				<img class="img" src="image/img2.png"/>
+				<img class="img" src="image/img3.png"/>
+				<img class="img" src="image/img4.png"/>
+				<img class="img" src="image/img5.png"/>
+				<img class="img" src="image/img6.png"/>
+				<img class="img" src="image/img3.png"/>
+				<img class="img" src="image/img4.png"/>
+				<img class="img" src="image/img5.png"/>
+				<img class="img" src="image/img6.png"/>
+			</aside>
+		</div>
+		<footer>
+			长沙职业技术学院版权所有 © 2005- 2014 　湘ICP备14000555号 <br>
+			地址：湖南省长沙市岳麓区雷锋镇正兴路157 　邮编：410217<br>
+			招生就业处电话：0731-88165420 0731-88105420</footer>
+	</body>
+</html>

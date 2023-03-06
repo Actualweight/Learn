@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+	<title>过渡属性</title>
+	<style>
+	  #trans {
+	    width: 50px;
+		height: 100px;
+		border: 1px solid red;
+		background-color: blue;
+		/* 过渡元素默认值all(具有中点值的所有元素)，过渡线性规律，默认*/
+		transition: 1s 1s; /* 当只有两个时间时 */
+	  }
+	  #trans:hover {
+	    width: 400px;
+	  }
+	  
+	</style>
+  </head>
+  <body>
+    
+	<div id="trans">
+	  div鼠标移入过渡操作
+	</div>
+  </body>
+</html>
+ 

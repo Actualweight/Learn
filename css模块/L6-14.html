@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>transform基础用法</title>
+		<style>
+			div{
+				 
+				width: 300px;
+				height: 200px;
+				background-color: red;
+				text-align: center;
+				float: left;
+				margin-left: 120px;
+				margin-top: 80px;
+				border: 1px seagreen solid;
+			}
+			#trans-1{
+				 /*逆时针旋转-10度，方向放大 */
+				transform: rotate(-10deg) scale(1.2);
+				/*RGBA 是代表Red（红色） Green（绿色） Blue（蓝色）和 Alpha（不透明度）三个单词的缩写*/
+				background-color: rgba(0,225,0,1);
+				background-image: url(image/img3.png);
+				background-size:183px 100px;
+				/*background-repeat:no-repeat;*/
+			}
+			#trans-2{
+				transform: skewX(-10deg); /*x方向逆时针扭曲10度*/
+				background-image: url(image/img2.png);
+				background-size:300px 200px;
+				
+				}
+			#trans-3{
+				/*x,y方向扭曲10,20度, x方向收缩*/
+				transform: skew(10deg,20deg) scaleX(0.5) ; 
+				background-image: url(image/img1.png);
+				background-size:320px 200px;
+				background-repeat: no-repeat;
+				}
+				 
+		</style>
+	</head>
+	<body>
+		<div id="trans-1"></div>
+		<div id="trans-2"></div>
+		<div id="trans-3"></div>
+	</body>
+</html>

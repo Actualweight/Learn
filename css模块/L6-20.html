@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>动画帧的变化</title>
+		<style>
+			body{
+				margin: 0px;
+				padding: 0px;
+			}
+			div{
+				width: 600px;
+				height: 600px;
+				border: 1px solid red;
+			}
+			#mydiv{
+				width: 200px;
+				height: 200px;
+				background-color: #61ff87;
+				left: 0px;
+				top:0px;
+				animation: movediv 5s alternate;
+			}
+			div:hover{
+				animation-play-state: paused;
+			}
+			@keyframes movediv{
+				from{} /*动画开始时的设置，也可以使用0%*/
+				25%{
+					background-color: #ff79ef;
+					margin-left: 400px;
+					margin-top: 0px;
+				}
+				50%{
+					background-color: #4249ff;
+					margin-left: 400px;
+					margin-top:400px;
+				}
+				75%{
+					border: double 2px #0e2218;
+					margin-left: 0px;
+					margin-top: 400px;
+				}
+				/*to表示动画结束时的状态，也可以使用100%*/
+				to{
+					margin-left: 0px;
+					margin-top: 0px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="mydiv"></div>
+		</div>
+	</body>
+</html>

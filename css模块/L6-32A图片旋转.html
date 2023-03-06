@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片旋转</title>
+		<style type="text/css">
+			 body{
+				perspective: 800px;
+				transform-style: preserve-3d;
+			}
+			#box{
+			  width: 300px;
+			  height: 300px;
+			  margin: 0 auto;
+			  transform-style: preserve-3d;
+			  position: relative;/*相对body定位*/
+			  transition: 1s;/*运动时间*/
+			  
+			}
+			#box:hover{
+			  transform:rotateY(180deg);/*当鼠标移动到上面时让他旋转180°*/
+			}
+			#box .bian{
+			  width: 300px;
+			  height: 300px;
+			  text-align: center;
+			  line-height: 300px;
+			  font-size: 100px;
+			  position: absolute; /*.mian相对与#box绝对定位*/
+			}
+			.zhi1{
+				background-color: red;
+				transform:rotateY(180deg);
+			}
+.zhi2{
+    background-color: yellow;
+    backface-visibility: hidden;/*设置后面的可适度为看不见*/
+}
+	</style>
+	</head>
+	<body style="background-color:#23d19d">
+  <div id="box">
+     <div class="bian zhi1"><img src="image/img1.png" style="width: 300px; height: 300px;"></div>
+     <div class="bian zhi2"><img src="image/img2.png" style="width: 300px; height: 300px;"></div>
+  </div>
+  
+</body>
+</html>

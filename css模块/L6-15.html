@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation动画基础</title>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: red;
+				margin: 0;
+				/*定义animation动画属性，名称为movediv，时间为2s，是组合属性*/
+				animation: movediv 2s;
+			}
+			/*定义关键帧，这里只有两帧，即开始状态和结束状态*/
+			@keyframes movediv{
+				from{
+					/*定义刚开始时的一些处理，通常直接使用原始样式*/
+				}
+				to{
+					margin-left: 500px;
+					background-color: blue;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+			
+	</body>
+</html>

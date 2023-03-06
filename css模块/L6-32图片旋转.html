@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body{
+				background: rgb(125, 102, 119);
+			}
+			#box{
+				transform-style: preserve-3d;
+				perspective: 800px;
+			}
+			/*添加3D效果和视距*/
+			.cont{♠
+				width: 200px;
+				height: 200px;
+				margin: 150px auto;
+				position: relative;
+				transform-style: preserve-3d;/*添加3D*/
+				transform: rotateX(10deg) rotateY(10deg);
+				animation:ziz 10s infinite;/*绑定事件，让他在10秒内执行完*/
+			}
+			@keyframes ziz{
+				0%{
+					transform:rotate(0deg);
+				}
+				50%{
+					transform:rotateX(180deg);
+				}
+				70%{
+					transform: rotateY(180deg);
+				}
+				100%{
+					transform:rotateX(0deg);
+				}
+			}
+			/*事件*/
+			.cont img{
+				width: 200px;
+				height: 200px;
+			}
+			.mian{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+			}
+			/*下面设置的6个面，让它们以不同的角度选择拼接*/
+			.mian:nth-child(1){
+				background: blue;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.mian:nth-child(2){
+				background: rgb(32, 193, 40);
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			.mian:nth-child(3){
+				background: red;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.mian:nth-child(4){
+				background: yellow;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.mian:nth-child(5){
+				background: #3ce8af;
+				transform:translateZ(100px);
+			}
+			.mian:nth-child(6){
+				background: #e476a3;
+				transform:translateZ(-100px) rotateY(180deg);
+			}
+		</style>
+		<title>3D旋转</title>
+	</head>
+	<body>
+  <div id="box">
+    <div id="cont"class="cont">
+      <div class="mian">
+        <img src="image/img1.png">
+      </div>
+      <div class="mian">
+        <img src="image/img2.png">
+      </div>
+      <div class="mian">
+        <img src="image/img3.png">
+      </div>
+      <div class="mian">
+        <img src="image/img4.png">
+      </div>
+      <div class="mian">
+        <img src="image/img5.png">
+      </div>
+      <div class="mian">
+        <img src="image/img6.png">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

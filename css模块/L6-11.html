@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2D扭曲</title>
+	<style>
+		.demoRotate{
+			width: 400px;
+			height: 400px;
+			background-color: red;
+			/*倾斜 skew(x轴倾斜角度，y轴倾斜角度)*/
+			transform: skew(20deg,20deg); //x，y方向均旋转20度
+			/* transform: skewY(30deg); //x，y方向均旋转20度 */
+			-webkit-transform: skew(20deg,20deg);  /*safari chrome*/ 
+			-ms-transform: skew(20deg,20deg);  /*IE*/ 
+			-o-transform: skew(20deg,20deg);  /*Opera*/ 
+			-moz-transform: skew(20deg,20deg);  /*FireFox*/
+			text-align: center;
+			font-size: 20px;	
+			margin-left: 200px;
+			float:left;
+	       }
+	       .demo {
+	  	    width: 400px;
+	  	    height: 400px;
+	  	    background-color: royalblue;
+		    margin-left: 200px;
+		    margin-top: 150px;
+	  }
+</style>
+</head>
+<body>
+<div class="demoRotate"> </div>
+<div class="demo"></div>
+</body>
+</html>

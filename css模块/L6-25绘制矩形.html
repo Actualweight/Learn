@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas绘制矩形</title>
+	</head>
+	<body>
+		<canvas id="cavsElem">
+			你的浏览器不支持canvas，请升级浏览器
+		</canvas>
+	</body>
+	<script>
+		
+		var canvas = document.getElementById("cavsElem");//获取画布
+		
+		var context = canvas.getContext('2d');//获取context上下文对象
+		canvas.width=900;
+		canvas.height=400;
+		canvas.style.border="1px solid #000";
+		
+		context.strokeRect(200,50,200,100);//绘制矩形
+		
+		context.fillRect(200,200,200,100);//绘制填充矩形
+		
+		//context.clearRect(100,100,200,150);//清除矩形
+	</script>
+</html>
